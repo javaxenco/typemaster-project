@@ -1,0 +1,27 @@
+@use "colors";
+
+@mixin heading($fz, $lh) {
+  color: colors.$dark-blue;
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+@mixin tablet {
+  @media (width <= 1110px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (width <= 768px) {
+    @content;
+  }
+}
+
+@mixin sm-mobile {
+  @media (width <= 480px) {
+    @content;
+  }
+}
